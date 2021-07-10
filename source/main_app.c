@@ -34,6 +34,7 @@
 #define mainADC_READ_CYCLE_TIME_MS                1UL
 #define mainADC_READ_CYCLE_TIME_TICKS             pdMS_TO_TICKS( mainADC_READ_CYCLE_TIME_MS )
 #define mainSIGNAL_PROCESSING_CYCLE_TIME_TICKS    pdMS_TO_TICKS( 100UL )
+#define mainINTERFACE_CYCLE_TIME_TICKS            pdMS_TO_TICKS( 1UL )
 #define mainSHOW_RUNTIME_STATUS_CYCLE_TIME_TIKS   pdMS_TO_TICKS( 3000UL )
 
 /* Constants */
@@ -324,6 +325,7 @@ static void prvSerialInterfaceTask( void * pvParameters )
                 user_input_counter = 0;
             }
         }
+        vTaskDelay(mainINTERFACE_CYCLE_TIME_TICKS);
     }
 }
 

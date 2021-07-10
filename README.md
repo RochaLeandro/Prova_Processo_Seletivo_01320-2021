@@ -29,14 +29,6 @@ Execute _make_ a partir do diretório base
 ## Execução
 Execute _./build/app_ a partir do diretório base (ou _./app_ a partir do direrório _build_)
 
-## Funcionalidades
-Lista de funcionalidades implementadas:
-* 
-
-## Pendências (TODO)
-Lista de pendências/melhorias:
-* 
-
 ## Referências
 Baseado no exemplo _Posix\_GCC_ do FreeRTOS.
 

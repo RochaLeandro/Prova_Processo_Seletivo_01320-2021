@@ -196,6 +196,13 @@ static void prvACDReadTask( void * pvParameters )
         {
             cycle_counter = 0;
         }
+
+        /* ONLY TO GEN RUNTIME STATUS */
+        int k;
+        for(k=0;k<1000000;k++)
+        {
+            __asm volatile ( "NOP" );
+        }
     }
 }
 
@@ -234,7 +241,14 @@ static void prvSignalProcessingTask( void * pvParameters )
                 sample *= PI_VALUE;
                 enqueue_signal_sample(sample);
             }
-        } while (has_sample);        
+        } while (has_sample);
+
+        /* ONLY TO GEN RUNTIME STATUS */
+        int k;
+        for(k=0;k<1000000;k++)
+        {
+            __asm volatile ( "NOP" );
+        }
     }
 }
 

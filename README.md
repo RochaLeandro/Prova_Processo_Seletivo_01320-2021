@@ -6,8 +6,6 @@
 - [Descrição](#descrição)
 - [Compilação](#compilação)
 - [Execução](#execução)
-- [Funcionalidades](#funcionalidades)
-- [Pendências (TODO)](#pendências-todo)
 - [Referências](#referências)
 - [Contato](#contato)
 

@@ -34,6 +34,8 @@ LDFLAGS               :=    -ggdb3 -pthread
 CPPFLAGS              :=    $(INCLUDE_DIRS) -DBUILD_DIR=\"$(BUILD_DIR_ABS)\"
 CPPFLAGS              +=    -D_WINDOWS_
 
+LIBS 				  := -lm
+
 
 ifeq ($(COVERAGE_TEST),1)
   CPPFLAGS              += -DprojCOVERAGE_TEST=1
@@ -50,7 +52,7 @@ ${BIN} : $(BUILD_DIR)/$(BIN)
 
 ${BUILD_DIR}/${BIN} : ${OBJ_FILES}
 	-mkdir -p ${@D}
-	$(CC) $^ ${LDFLAGS} -o $@
+	$(CC) $^ ${LDFLAGS} -o $@ $(LIBS)
 
 -include ${DEP_FILE}
 

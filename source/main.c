@@ -67,7 +67,7 @@ StackType_t uxTimerTaskStack[ configTIMER_TASK_STACK_DEPTH ];
 /*-----------------------------------------------------------*/
 
 /**
- * @brief main
+ * @brief Main
  * 
  * @return int 
  */
